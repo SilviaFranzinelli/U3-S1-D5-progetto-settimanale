@@ -4,7 +4,7 @@ import { Bell, PersonCircle, Search } from "react-bootstrap-icons"
 function MyNav() {
     return (
         <Navbar collapseOnSelect expand="lg" >
-            <Container className="container-fluid">
+            <Container fluid>
                 <img src="src\assets\netflix_logo.png"  style={{width:"130px" }}></img>
                 
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
