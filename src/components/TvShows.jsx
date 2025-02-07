@@ -5,14 +5,14 @@ function TvShows() {
     return (
 
         <div className="d-flex aling-items-center justify-content-between mx-5">
-            <div className="d-flex">
+            <div className="d-flex  aling-items-center">
                 <h1>TV Shows</h1>
-                <Dropdown>
+                <Dropdown className="m-2 mx-4">
                     <DropdownToggle variant="dark" id="dropdown-basic" style={{border:"1px solid white"}}>
                         Genres
                     </DropdownToggle>
 
-                    <DropdownMenu>
+                    <DropdownMenu variant="dark">
                         <DropdownItem href="#">Comedy</DropdownItem>
                         <DropdownItem href="#">Drama</DropdownItem>
                         <DropdownItem href="#">Thriller</DropdownItem>

@@ -14,6 +14,7 @@ function App() {
       <MyNav></MyNav>
       <TvShows></TvShows>
       <Gallery></Gallery>
+      <hr></hr>
       <Footer></Footer>
     </div>
   )

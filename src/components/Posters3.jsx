@@ -1,13 +1,13 @@
 import { Component } from "react";
 
-class Posters extends Component{
+class Posters3 extends Component{
 
     state= {
         imgPosters: []
     }
 
     fetchPoster = ()=>{
-        fetch("http://www.omdbapi.com/?s=lord&apikey=57fbf96c")
+        fetch("http://www.omdbapi.com/?s=narnia&apikey=57fbf96c")
         .then((resp)=> {
             if(resp.ok){
                 return resp.json()
@@ -19,7 +19,8 @@ class Posters extends Component{
         .then((data)=>{
             console.log(data)
             this.setState({
-                imgPosters: data.Search  
+                imgPosters: data.Search 
+                .splice(0,6) 
             })
         })
         .catch((e)=> {console.log(e)})
@@ -34,9 +35,9 @@ class Posters extends Component{
         
         return (
             <div>
-                {this.state.imgPosters.map(Posters => {
+                {this.state.imgPosters.map(Posters3 => {
                     return(
-                        <img key={Posters.imdbID} src={Posters.Poster} />
+                        <img key={Posters3.imdbID} src={Posters3.Poster} style={{height:"25rem", margin:"10px"}} />
                     )
                 })}
             </div>
@@ -44,4 +45,4 @@ class Posters extends Component{
     }
 }
 
-export default Posters
+export default Posters3
