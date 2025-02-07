@@ -19,7 +19,7 @@ class Posters extends Component{
         .then((data)=>{
             console.log(data)
             this.setState({
-                imgPoster: data
+                imgPosters: data.Search  
             })
         })
         .catch((e)=> {console.log(e)})
@@ -34,9 +34,9 @@ class Posters extends Component{
         
         return (
             <div>
-                {this.state.imgPoster.map(Posters => {
+                {this.state.imgPosters.map(Posters => {
                     return(
-                        <img key={Posters.imdbID}> {Posters.Poster} </img>
+                        <img key={Posters.imdbID} src={Posters.Poster} />
                     )
                 })}
             </div>
